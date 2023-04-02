@@ -39,7 +39,7 @@ public class ClientRepositoryTests {
 	@Test
 	void testGetClients() {
 		//before
-		List<Client> clients1 = clientRepository.searchClientsByFilters("steven");
+		List<Client> clients1 = clientRepository.searchClientsByFilters("steven","","","");
 		assertThat(clients1.size()).isEqualTo(0);
 		//after
 		Client client1 = new Client();
@@ -59,7 +59,7 @@ public class ClientRepositoryTests {
 		clientRepository.save(client1);
 		clientRepository.save(client2);
 		
-		List<Client> clients2 = clientRepository.searchClientsByFilters("st");
+		List<Client> clients2 = clientRepository.searchClientsByFilters("st","","","");
 		List<Client> clients3 = (List<Client>) clientRepository.findAll();
 		assertThat(clients2.size()).isEqualTo(1);
 		assertThat(clients3.size()).isGreaterThan(1);
