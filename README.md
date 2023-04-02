@@ -12,6 +12,6 @@ en la clase ClientRepositoryTests click derecho -> Run As -> Unit test
 
 ## detalles
 
-como base de datos se SQLite ya que es una DB embebida y así simplificar el despliegue. Esta DB esta en la raiz del proyecto con nombre database.sqlite
+como base de datos se escogio SQLite ya que es una DB embebida y así simplificar el despliegue. Esta DB esta en la raiz del proyecto con nombre database.sqlite
 
 se utilizo el sistema de logs provisto por el framework y se especifico que se guardaran en la ubicación logs/spring.log del proyecto
