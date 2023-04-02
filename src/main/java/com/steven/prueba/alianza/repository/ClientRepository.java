@@ -19,9 +19,6 @@ public interface ClientRepository extends CrudRepository<Client,Integer>{
 
 	public List<Client> findByNameContainingIgnoreCaseAndEmailContainingIgnoreCase (String name, String email);
 	
-	@Query("SELECT c FROM Client c WHERE c.sharedKey like %:sharedKey% and c.email like %:email% "
-			+ " and c.name like %:name% and c.phone like %:phone% "
-			+ " ORDER BY c.id DESC")
-    List<Client> searchClientsByFilters(@Param("sharedKey") String sharedKey, @Param("email") String email, 
-    		@Param("name") String name, @Param("phone") String phone);
+	@Query("SELECT c FROM Client c WHERE c.sharedKey like %:sharedKey% ORDER BY c.id DESC")
+    List<Client> searchClientsByFilters(@Param("sharedKey") String sharedKey);
 }

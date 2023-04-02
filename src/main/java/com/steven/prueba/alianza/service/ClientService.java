@@ -36,8 +36,8 @@ public class ClientService {
 		return clientSaved;
 	}
 	
-	public List<Client> getClientsByFilters (String sharedKey, String email, String name, String phone) {
-		List<Client> clients = clientRepository.searchClientsByFilters(sharedKey, email, name, phone);
+	public List<Client> getClientsByFilters (String sharedKey) {
+		List<Client> clients = clientRepository.searchClientsByFilters(sharedKey);
 		return clients;
 	}
 }

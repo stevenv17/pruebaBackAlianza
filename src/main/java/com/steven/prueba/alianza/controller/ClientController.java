@@ -46,10 +46,7 @@ public class ClientController {
 		ObjectMapper objectMapper = new ObjectMapper();
 		JsonNode jsonNode = objectMapper.readTree(jsonString);
 		String sharedKey = jsonNode.get("sharedKey").asText();
-		String email = jsonNode.get("email").asText();
-		String name = jsonNode.get("name").asText();
-		String phone = jsonNode.get("phone").asText();
-        return clientService.getClientsByFilters(sharedKey, email, name, phone);
+        return clientService.getClientsByFilters(sharedKey);
     }
 	
 }
